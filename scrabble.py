@@ -1,37 +1,49 @@
 vardnica={
     'a' : 1,
-    'ā' : 1,
-    'b' : 3,
-    'c' : 1,
-    'č' : 1,
-    'd' : 3,
+    'ā' : 4,
+    'b' : 2,
+    'c' : 3,
+    'č' : 8,
+    'd' : 2,
     'e' : 1,
-    'ē'
-    'f'
-    'g'
-    'ģ' : 1,
+    'ē' : 5,
+    'f' : 4,
+    'g' : 2,
+    'ģ' : 5,
     'h' : 3,
-    'i'
-    'ī' : 1,
-    'j' : 1,
-    'k' : 3,
-    'ķ' : 1,
-    'l' : 1,
-    'ļ' : 3,
-    'm' : 1,
-    'n' : 1,
-    'ņ' : 3,
+    'i' : 1,
+    'ī' : 4,
+    'j' : 3,
+    'k' : 2,
+    'ķ' : 5,
+    'l' : 2,
+    'ļ' : 4,
+    'm' : 2,
+    'n' : 2,
+    'ņ' : 4,
     'o' : 1,
-    'p' : 1,
-    'r' : 3,
+    'p' : 3,
+    'r' : 2,
     's' : 1,
-    'š' : 1,
-    't' : 3,
+    'š' : 5,
+    't' : 1,
     'u' : 1,
-    'ū' : 1,
-    'v' : 3,
+    'ū' : 8,
+    'v' : 1,
     'z' : 1,
-    'ž' : 1,
-    
+    'ž' : 8
+    }
 
-}
+vards = input("Ievadiet savu vardu: ")
+
+def parbaudit(word):
+    summa = 0
+    for burts in word:
+        if burts in vardnica.keys():
+            summa+=vardnica[burts]
+    return summa 
+
+resultats = parbaudit(vards)
+
+
+print(f"Par šo vardu jus dabujat {resultats} punkti")
